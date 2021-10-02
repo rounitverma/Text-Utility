@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 // import "./App.css";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import React, { useState } from 'react';
@@ -41,7 +41,7 @@ function App() {
       <Alert alert={alert}/>
       <div className="container my-3">
         <Textform heading="Enter text to be analysed below" mode={mode} showAlert={showAlert}/>
-        {/* <About/> */}
+        <About/>
       </div>
     </>
   );

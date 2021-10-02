@@ -22,6 +22,14 @@ export default function Textform(props) {
     props.showAlert("Cleared textarea","success");
   };
 
+  const handleCopyClick = () => {
+    let copyText = document.getElementById('myBox');
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    props.showAlert("Text copied !","success");
+  }
+
   const [text, setText] = useState("");
   return (
     <>
@@ -51,8 +59,11 @@ export default function Textform(props) {
         <button className="btn btn-primary mx-2" onClick={handleLoClick}>
           Convert to LowerCase
         </button>
-        <button className="btn btn-primary" onClick={handleClearClick}>
+        <button className="btn btn-primary mx-2" onClick={handleClearClick}>
           Clear writing space
+        </button>
+        <button className="btn btn-primary" onClick={handleCopyClick}>
+          Copy text
         </button>
       </div>
 
