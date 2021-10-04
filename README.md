@@ -6,4 +6,6 @@ $ cd Text-Utility
 
 $ npm install
 
+$ npm install react-router-dom
+
 $ npm start
